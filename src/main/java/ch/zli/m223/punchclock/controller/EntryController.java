@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -36,6 +37,13 @@ public class EntryController {
     @Operation(summary = "Add a new Entry", description = "The newly created entry is returned. The id may not be passed.")
     public Entry add(Entry entry) {
        return entryService.createEntry(entry);
+    }
+
+    @DELETE
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Deletes the given entry", description = "Tries to delete the entry and returns whether that worked.")
+    public void delete(Entry entry) {
+        entryService.deleteEntry(entry);
     }
 
 }
