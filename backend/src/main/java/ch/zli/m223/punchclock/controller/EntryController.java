@@ -65,6 +65,7 @@ public class EntryController {
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Updates the given entry", description = "Merges the given entry with the entry that has the same id in the database")
     public Entry update(Entry entry) {
         return entryService.updateEntry(entry);
     }
