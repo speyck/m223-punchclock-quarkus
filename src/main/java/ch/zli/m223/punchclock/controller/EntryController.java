@@ -11,7 +11,9 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
@@ -38,7 +40,11 @@ public class EntryController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Operation(summary = "Add a new Entry", description = "The newly created entry is returned. The id may not be passed.")
     public Entry add(Entry entry) {
-       return entryService.createEntry(entry);
+        if (!entry.getCheckIn().isBefore(entry.getCheckOut())) {
+            throw new WebApplicationException("CheckIn DateTime must be before CheckOut DateTime", Response.Status.BAD_REQUEST);
+        }
+
+        return entryService.createEntry(entry);
     }
 
     @GET
