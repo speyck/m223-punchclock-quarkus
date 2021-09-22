@@ -49,10 +49,10 @@ public class EntryController {
     }
 
     @DELETE
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Operation(summary = "Deletes the given entry", description = "Tries to delete the entry and returns whether that worked.")
-    public void delete(Entry entry) {
-        entryService.deleteEntry(entry);
+    @Path("/{id}")
+    @Operation(summary = "Tries to delete the entry", description = "Deletes the entry corresponding the given entry id")
+    public void delete(@PathParam("id") Long id) {
+        entryService.deleteEntry(id);
     }
 
 }
