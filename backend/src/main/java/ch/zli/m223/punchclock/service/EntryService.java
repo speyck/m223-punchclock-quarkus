@@ -8,7 +8,9 @@ import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 
 import ch.zli.m223.punchclock.domain.Entry;
+import io.quarkus.security.Authenticated;
 
+@Authenticated
 @ApplicationScoped
 public class EntryService {
     @Inject
