@@ -30,7 +30,7 @@ The Manage Entity contains the main cases for inheriting cases. It's extended by
 - **Easy-to-use**: The `REST` API should not be overcomplicated and only contain the neccessary interfaces. Difference requests for similar things should be accessible from the same URL. The request URL's should all follow the same style (*naming-convention*).
 
 ## Subject Class Diagram
-<sub>'Subject class diagram' comes from the german name 'Fachklassendiagramm'</sub>
+<sub>'Subject class diagram' is a literal translation of the german name 'Fachklassendiagramm'</sub>
 
 <img src="/docs/fach-class-diagram/class-diagram.png" width="800px" />
 
