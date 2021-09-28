@@ -40,3 +40,6 @@ The Manage Entity contains the main cases for inheriting cases. It's extended by
 
 ## Persona(s)
 <img src="https://github.com/speyck/m223-punchclock-quarkus/blob/main/docs/personas/Main Persona.png" width="800px" />
+
+## Package Diagram
+<img src="https://github.com/speyck/m223-punchclock-quarkus/blob/main/docs/package-diagram/Packagediagram.png" width="800px" />
