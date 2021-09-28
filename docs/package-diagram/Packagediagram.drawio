@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e" scale="4" border="0">
+    <diagram id="GN6i48fRpgpDETcMnNl6" name="Page-1">
+        <mxGraphModel dx="1204" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="20" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; margin-left: 10px ; text-align: left&quot;&gt;&lt;span style=&quot;font-weight: 700 ; text-align: center&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;ch.zli.m223.punchclock&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="html=1;shape=mxgraph.sysml.package;align=left;spacingLeft=-2;verticalAlign=top;spacingTop=-3;labelX=135;html=1;overflow=fill;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="160" width="420" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&amp;lt;&amp;lt;import&amp;gt;&amp;gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;edgeStyle=none;endArrow=open;dashed=1;verticalAlign=top;labelBackgroundColor=none;endSize=12;html=1;" edge="1" parent="1" source="21" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;br&gt;Controller" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;shape=folder;spacingLeft=10;tabWidth=40;tabHeight=14;tabPosition=left;fontSize=10;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="310" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;br&gt;Domain" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;shape=folder;spacingLeft=10;tabWidth=40;tabHeight=14;tabPosition=left;fontSize=10;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="210" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;br&gt;Service" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;shape=folder;spacingLeft=10;tabWidth=40;tabHeight=14;tabPosition=left;fontSize=10;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="210" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&amp;lt;&amp;lt;import&amp;gt;&amp;gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;edgeStyle=none;endArrow=open;dashed=1;verticalAlign=top;labelBackgroundColor=none;endSize=12;html=1;exitX=0;exitY=0;exitDx=70;exitDy=14;exitPerimeter=0;" edge="1" parent="1" source="13" target="14">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="260" y="245" as="sourcePoint"/>
+                        <mxPoint x="420" y="245" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="&amp;lt;&amp;lt;import&amp;gt;&amp;gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;edgeStyle=none;endArrow=open;dashed=1;verticalAlign=top;labelBackgroundColor=none;endSize=12;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="13" target="21">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="270" y="255" as="sourcePoint"/>
+                        <mxPoint x="430" y="255" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
