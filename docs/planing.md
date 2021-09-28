@@ -1,13 +1,13 @@
 <div align="center">
   <h1>
-    <img src="/docs/zli-logo.png" alt="ZLI Logo" width="75px"/>
+    <img src="https://github.com/speyck/m223-punchclock-quarkus/blob/main/docs/zli-logo.png" width="75px"/>
     M223 - Planing
   </h1>
-  This document is the main plan for upcoming changes and contains all neccesarry information and diagrams stated in the project order.
+  This document is the main plan for upcoming changes and contains all necesarry information and diagrams stated in the assignment.
 </div>
 
 ## Use-Case Diagram
-<img src="/docs/usecase-diagram/usecase-diagram.png" width="800px" />
+<img src="https://github.com/speyck/m223-punchclock-quarkus/blob/main/docs/usecase-diagram/usecase-diagram.png" width="800px" />
 
 ### Login  
 When the user logs in, the application recieves a `JSON Web Token` (JWT) which it then uses for autorisation on each `REST` request.
@@ -29,10 +29,14 @@ The Manage Entity contains the main cases for inheriting cases. It's extended by
 - **Performance**: The system should be able to handle multiple requests at a time, so more than one user can use the software simultaneously.
 - **Easy-to-use**: The `REST` API should not be overcomplicated and only contain the neccessary interfaces. Difference requests for similar things should be accessible from the same URL. The request URL's should all follow the same style (*naming-convention*).
 
-## Subject Class Diagram
-<sub>'Subject class diagram' is a literal translation of the german name 'Fachklassendiagramm'</sub>
+## Activity Diagram
+### Entity Deletion Request
+<img src="https://github.com/speyck/m223-punchclock-quarkus/blob/main/docs/activity-diagram/Activitydiagram.png" width="800px" />
 
-<img src="/docs/fach-class-diagram/class-diagram.png" width="800px" />
+## Subject Class Diagram
+<sub>'Subject class diagram' is a literal translation of the german name 'Fachklassendiagramm'. The difference to a normal class diagram (to my knowledge) is that only model classes are illustrated.</sub>
+
+<img src="https://github.com/speyck/m223-punchclock-quarkus/blob/main/docs/fach-class-diagram/class-diagram.png" width="800px" />
 
 ## Persona(s)
-<img src="/docs/personas/Main Persona.png" width="800px" />
+<img src="https://github.com/speyck/m223-punchclock-quarkus/blob/main/docs/personas/Main Persona.png" width="800px" />
