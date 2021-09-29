@@ -14,7 +14,7 @@ public class Category {
     private String title;
 
     @OneToMany(mappedBy = "category")
-    private List<Entry> entires;
+    private List<Entry> entries;
 
     public Long getId() {
         return id;
@@ -33,10 +33,10 @@ public class Category {
     }
 
     public List<Entry> getEntries() {
-        return entires;
+        return entries;
     }
 
     public void setEntries(List<Entry> entries) {
-        this.entires = entries;
+        this.entries = entries;
     }
 }
