@@ -56,4 +56,12 @@ public class Entry {
     public void setCategory(Category category) {
         this.category = category;
     }
+
+    public List<Participant> getParticipants() {
+        return participants;
+    }
+
+    public void setParticipants(List<Participant> participants) {
+        this.participants = participants;
+    }
 }
