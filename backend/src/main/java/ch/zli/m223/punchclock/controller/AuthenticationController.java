@@ -8,7 +8,7 @@ import javax.ws.rs.core.Response;
 import ch.zli.m223.punchclock.domain.User;
 import ch.zli.m223.punchclock.service.AuthenticationService;
 
-@Path("/atuh")
+@Path("/api/auth")
 public class AuthenticationController {
 
     @Inject
