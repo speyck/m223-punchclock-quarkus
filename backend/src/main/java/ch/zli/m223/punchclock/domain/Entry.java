@@ -25,6 +25,9 @@ public class Entry {
     @OneToMany(mappedBy = "entry")
     private List<Participant> participants;
 
+    @ManyToOne
+    private Location location;
+
     public Long getId() {
         return id;
     }
@@ -63,5 +66,13 @@ public class Entry {
 
     public void setParticipants(List<Participant> participants) {
         this.participants = participants;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }
