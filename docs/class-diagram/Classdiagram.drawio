@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" scale="4" border="0">
     <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-        <mxGraphModel dx="4107" dy="3469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="1510" dy="1648" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="WIyWlLk6GJQsqaUBKTNV-0"/>
                 <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0"/>
@@ -623,6 +623,26 @@
                         <Array as="points">
                             <mxPoint x="1670" y="-179"/>
                         </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="187" value="AuthenticationController" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+                    <mxGeometry x="-140" y="33" width="280" height="86" as="geometry">
+                        <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="188" value="- authenticationService: AuthenticationService" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" vertex="1" parent="187">
+                    <mxGeometry y="26" width="280" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="189" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="187">
+                    <mxGeometry y="52" width="280" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="190" value="+ login(User user): String" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" vertex="1" parent="187">
+                    <mxGeometry y="60" width="280" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="192" value="" style="endArrow=open;endFill=1;endSize=12;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="187" target="zkfFHV4jXpPFQw0GAbJ--6">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="-20" y="70" as="sourcePoint"/>
+                        <mxPoint x="140" y="70" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
