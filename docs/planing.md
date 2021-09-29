@@ -49,3 +49,17 @@ The Manage Entity contains the main cases for inheriting cases. It's extended by
 
 ## Class Diagram
 <img src="https://github.com/speyck/m223-punchclock-quarkus/blob/main/docs/class-diagram/Classdiagram.png" />
+
+## Test Cases
+### Functional
+- Entites can be created
+- Entites can be deleted
+- Categories can be listed
+- Categories can be updated
+- Locations can be created
+- Locations can be updated
+
+### Non-Functional
+- All API interfaces are following the same naming convention
+- Data can only be viewed and edited when logged in
+- THe API does not accept wrong/inconsistent data
