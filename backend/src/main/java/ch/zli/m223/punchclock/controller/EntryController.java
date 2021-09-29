@@ -23,7 +23,7 @@ import ch.zli.m223.punchclock.service.EntryService;
 
 @Path("/entries")
 @Tag(name = "Entries", description = "Handling of entries")
-public class EntryController {
+public class EntryController implements IEntityController<Entry> {
 
     @Inject
     EntryService entryService;
@@ -39,7 +39,7 @@ public class EntryController {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @Operation(summary = "Add a new Entry", description = "The newly created entry is returned. The id may not be passed.")
-    public Entry add(Entry entry) {
+    public Entry create(Entry entry) {
         if (!entry.getCheckIn().isBefore(entry.getCheckOut())) {
             throw new WebApplicationException("CheckIn DateTime must be before CheckOut DateTime", Response.Status.BAD_REQUEST);
         }
@@ -51,7 +51,7 @@ public class EntryController {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{id}")
     @Operation(summary = "Gets the entry with the given id", description = "Searches for the entry with the specified id and returns the Entry object")
-    public Entry getEntry(@PathParam("id") Long id) {
+    public Entry get(@PathParam("id") Long id) {
         return entryService.getEntry(id);
     }
 
