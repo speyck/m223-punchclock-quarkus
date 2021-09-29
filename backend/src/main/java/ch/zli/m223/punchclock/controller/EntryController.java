@@ -19,7 +19,9 @@ import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import ch.zli.m223.punchclock.domain.Entry;
+import ch.zli.m223.punchclock.domain.Participant;
 import ch.zli.m223.punchclock.service.EntryService;
+import ch.zli.m223.punchclock.service.ParticipantService;
 
 @Path("/api/entries")
 @Tag(name = "Entries", description = "Handling of entries")
@@ -27,6 +29,9 @@ public class EntryController implements IEntityController<Entry> {
 
     @Inject
     EntryService entryService;
+
+    @Inject
+    ParticipantService participantService;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -44,7 +49,14 @@ public class EntryController implements IEntityController<Entry> {
             throw new WebApplicationException("CheckIn DateTime must be before CheckOut DateTime", Response.Status.BAD_REQUEST);
         }
 
-        return entryService.create(entry);
+        Entry created = entryService.create(entry);
+
+        for (Participant participant : created.getParticipants()) {
+            participant.setEntry(created);
+            participantService.create(participant);
+        }
+
+        return created;
     }
 
     @GET
