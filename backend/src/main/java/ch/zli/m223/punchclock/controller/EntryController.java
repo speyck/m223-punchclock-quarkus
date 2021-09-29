@@ -32,7 +32,7 @@ public class EntryController implements IEntityController<Entry> {
     @Produces(MediaType.APPLICATION_JSON)
     @Operation(summary = "List all Entries", description = "")
     public List<Entry> list() {
-        return entryService.findAll();
+        return entryService.list();
     }
 
     @POST
@@ -44,7 +44,7 @@ public class EntryController implements IEntityController<Entry> {
             throw new WebApplicationException("CheckIn DateTime must be before CheckOut DateTime", Response.Status.BAD_REQUEST);
         }
 
-        return entryService.createEntry(entry);
+        return entryService.create(entry);
     }
 
     @GET
@@ -52,14 +52,14 @@ public class EntryController implements IEntityController<Entry> {
     @Path("/{id}")
     @Operation(summary = "Gets the entry with the given id", description = "Searches for the entry with the specified id and returns the Entry object")
     public Entry get(@PathParam("id") Long id) {
-        return entryService.getEntry(id);
+        return entryService.get(id);
     }
 
     @DELETE
     @Path("/{id}")
     @Operation(summary = "Tries to delete the entry", description = "Deletes the entry corresponding the given entry id")
     public void delete(@PathParam("id") Long id) {
-        entryService.deleteEntry(id);
+        entryService.delete(id);
     }
 
     @PUT
@@ -67,6 +67,6 @@ public class EntryController implements IEntityController<Entry> {
     @Consumes(MediaType.APPLICATION_JSON)
     @Operation(summary = "Updates the given entry", description = "Merges the given entry with the entry that has the same id in the database")
     public Entry update(Entry entry) {
-        return entryService.updateEntry(entry);
+        return entryService.update(entry);
     }
 }
