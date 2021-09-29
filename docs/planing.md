@@ -62,4 +62,8 @@ The Manage Entity contains the main cases for inheriting cases. It's extended by
 ### Non-Functional
 - All API interfaces are following the same naming convention
 - Data can only be viewed and edited when logged in
-- THe API does not accept wrong/inconsistent data
+- The API does not accept wrong/inconsistent data
+
+## Source
+
+The repository for <a href="https://github.com/speyck/m223-punchclock-quarkus/blob/main/docs/planing.md">this file</a> is on github: <a href="https://github.com/speyck/m223-punchclock-quarkus">github.com/speyck</a>
