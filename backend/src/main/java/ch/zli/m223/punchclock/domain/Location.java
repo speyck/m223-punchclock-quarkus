@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Location {
     @Id
@@ -19,6 +21,7 @@ public class Location {
     @Column(nullable = false)
     private String city;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "location")
     private List<Entry> entries;
 
