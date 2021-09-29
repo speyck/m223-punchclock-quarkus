@@ -2,6 +2,8 @@ package ch.zli.m223.punchclock.domain;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Participant {
     @Id
@@ -20,6 +22,7 @@ public class Participant {
     @Column(nullable = true)
     private String phone;
 
+    @JsonIgnore
     @ManyToOne
     private Entry entry;
 
