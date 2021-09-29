@@ -1,6 +1,9 @@
 package ch.zli.m223.punchclock.domain;
 
 import javax.persistence.*;
+
+import java.util.List;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -18,6 +21,9 @@ public class Entry {
 
     @ManyToOne
     private Category category;
+
+    @OneToMany(mappedBy = "entry")
+    private List<Participant> participants;
 
     public Long getId() {
         return id;
