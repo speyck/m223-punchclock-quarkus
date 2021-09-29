@@ -12,34 +12,34 @@ import io.quarkus.security.Authenticated;
 
 @Authenticated
 @ApplicationScoped
-public class EntryService {
+public class EntryService implements IEntityService<Entry> {
     @Inject
     private EntityManager entityManager;
 
     @Transactional 
-    public Entry createEntry(Entry entry) {
+    public Entry create(Entry entry) {
         entityManager.persist(entry);
         return entry;
     }
 
     @SuppressWarnings("unchecked")
-    public List<Entry> findAll() {
+    public List<Entry> list() {
         var query = entityManager.createQuery("FROM Entry");
         return query.getResultList();
     }
     
-    public Entry getEntry(Long id) {
+    public Entry get(Long id) {
         return entityManager.find(Entry.class, id);
     }
 
     @Transactional
-    public void deleteEntry(Long id) {
-        Entry found = getEntry(id);
+    public void delete(Long id) {
+        Entry found = get(id);
         entityManager.remove(found);
     }
 
     @Transactional
-    public Entry updateEntry(Entry entry) {
+    public Entry update(Entry entry) {
         return entityManager.merge(entry);
     }
 }
