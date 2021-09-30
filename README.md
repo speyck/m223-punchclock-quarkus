@@ -1,4 +1,4 @@
-<h1 align="center">M223</h1>
+<h1 align="center"><img src="https://github.com/speyck/m223-punchclock-quarkus/blob/main/docs/zli-logo.png" width="75px"/> M223</h1>
 
 ## Installation
 1. Clone this repository into any directory on your computer: `git clone https://github.com/speyck/m223-punchclock-quarkus/` 
