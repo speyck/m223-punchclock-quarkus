@@ -21,8 +21,12 @@ Head on to http://localhost:8080/q/swagger-ui/ to use it
 The H2 Console allows insight onto the database and editing similar to PhpMyAdmin.
 Head on to http://localhost:8080/h2/ to use it. You need the following credentials to login:
 
-**JDBC URL**: jdbc:h2:mem:punchclock
+- **JDBC URL**: jdbc:h2:mem:punchclock
+- **User Name**: zli
+- **Password**: zli
 
-**User Name**: zli
+## GUI Login
+Here's the default user to log into the GUI app:
 
-**Password**: zli
+- **Username**: zli
+- **Password**: root
