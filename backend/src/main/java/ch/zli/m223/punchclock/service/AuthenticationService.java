@@ -24,8 +24,7 @@ public class AuthenticationService {
         String token =
             Jwt.issuer("https://zli.ch/issuer") 
             .upn(username) 
-            .groups(new HashSet<>(Arrays.asList("User", "Admin"))) 
-            .claim(Claims.birthdate.name(), "2001-07-13")
+            .groups(new HashSet<>(Arrays.asList("User"))) 
             .expiresIn(Duration.ofHours(1)) 
             .sign();
         return token;
