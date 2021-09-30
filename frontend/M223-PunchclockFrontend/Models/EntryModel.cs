@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace M223_PunchclockFrontend.Models
@@ -16,5 +17,11 @@ namespace M223_PunchclockFrontend.Models
 
         [JsonProperty("category")]
         public CategoryModel Category { get; set; }
+
+        [JsonProperty("location")]
+        public LocationModel Location { get; set; }
+
+        [JsonProperty("participants")]
+        public List<ParticipantModel> Participants { get; set; }
     }
 }
