@@ -30,3 +30,9 @@ Here's the default user to log into the GUI app:
 
 - **Username**: zli
 - **Password**: root
+
+## Planing
+All diagrams and planing documentation can be found in the [/docs/planing.md](https://github.com/speyck/m223-punchclock-quarkus/blob/main/docs/planing.md) file.
+
+## Disclaimer
+Sadly, the GUI is not working as it should. There's a error that I just can't fix and I had no time left to fix it. The API can still be tested though from the swagger ui and it should function with no problems. :)
