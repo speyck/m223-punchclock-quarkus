@@ -1,0 +1,48 @@
+﻿@inject IAuthenticationService AuthService
+@inject MessageService _message
+
+<Form Model="@model"
+      OnFinish="OnFinish"
+      OnFinishFailed="OnFinishFailed"
+      LabelColSpan="8"
+      WrapperColSpan="10">
+    <FormItem Label="Username">
+        <Input @bind-Value="@model.Username" />
+    </FormItem>
+    <FormItem Label="Password">
+        <InputPassword @bind-Value="@model.Password" />
+    </FormItem>
+    <FormItem WrapperColOffset="8" WrapperColSpan="10">
+        <Button Type="@ButtonType.Primary" HtmlType="submit" Loading="isLoading">
+            Login
+        </Button>
+    </FormItem>
+</Form>
+
+@code {
+    private AuthenticationUserModel model = new();
+    private bool isLoading = false;
+
+    private async Task OnFinish()
+    {
+        isLoading = true;
+        var result = await AuthService.Login(model);
+        isLoading = false;
+        if (result != null)
+        {
+            await _message.Success("Login successful");
+        }
+        else
+        {
+            model.Password = "";
+            await _message.Error("Login failed");
+        }
+
+        StateHasChanged();
+    }
+
+    private async Task OnFinishFailed()
+    {
+        await _message.Error("Login failed");
+    }
+}

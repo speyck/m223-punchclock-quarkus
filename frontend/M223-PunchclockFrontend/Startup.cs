@@ -1,14 +1,14 @@
+using M223_PunchclockFrontend.Authentication;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace M223_PunchclockFrontend
 {
@@ -27,6 +27,16 @@ namespace M223_PunchclockFrontend
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            services.AddHttpClient(Options.DefaultName, c =>
+            {
+                c.BaseAddress = new Uri("http://localhost:8080/");
+            });
+
+            services.AddScoped<AuthenticationResolveService, AuthenticationResolveService>();
+            services.AddScoped<AuthenticationStateProvider, AuthStateProvider>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+
             services.AddAntDesign();
         }
 
@@ -44,7 +54,7 @@ namespace M223_PunchclockFrontend
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();

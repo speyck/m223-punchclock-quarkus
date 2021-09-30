@@ -1,0 +1,36 @@
+﻿@page "/entries"
+
+<h3>Entries</h3>
+
+<Table @ref="table"
+       TItem="EntryModel"
+       DataSource="@entries"
+       SelectedRows="@selected">
+
+    <Selection Key="@(context.Id.ToString())" />
+    <Column @bind-Field="@context.Id" Sortable />
+    <Column @bind-Field="@context.CheckIn" Format="yyyy-MM-dd" Sortable />
+    <Column @bind-Field="@context.CheckOut" Format="yyyy-MM-dd" Sortable />
+    @*<ActionColumn Title="Action">
+        @if (!editCache[data.Id].edit)
+        {
+            <a @onclick="() => startEdit(data.Id)">Edit</a>
+        }
+        else
+        {
+            <a @onclick="() => saveEdit(data.Id)" class="save">Save</a>
+            <Popconfirm Title="Sure to cancel?"
+                        OnConfirm="() => cancelEdit(data.Id)"
+                        OkText="Yes"
+                        CancelText="No">
+                <a>Cancel</a>
+            </Popconfirm>
+        }
+    </ActionColumn>*@
+</Table>
+
+@code {
+    private List<EntryModel> entries;
+    private ITable table;
+    private IEnumerable<EntryModel> selected;
+}
